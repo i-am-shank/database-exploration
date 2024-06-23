@@ -1,0 +1,53 @@
+SHOW DATABASES;
+
+CREATE DATABASE Book_Haven;
+
+USE Book_Haven;
+
+CREATE TABLE Books (
+	book_id INT NOT NULL PRIMARY KEY,
+    title VARCHAR(255),
+    author VARCHAR(255),
+    genre VARCHAR(255),
+    price DECIMAL,
+    published_date DATE,
+    rating DECIMAL,
+    stock INT
+);
+
+DESCRIBE Books;
+
+TRUNCATE Books;
+
+INSERT INTO Books VALUES
+	(1, "The Silent Patient", "Author1", "Thriller", 15.99, "2019-02-05", 4.3, 12),
+    (2, "Where the Crawdads Sing", "Author2", "Literature", 18.00, "2020-08-14", 4.5, 5),
+    (3, "Becoming", "Author2", "Biography", 25.00, "2018-11-13", 4.8, 3),
+    (4, "To Kill a Mockingbird", "Author2", "Fiction", 12.99, "2021-02-20", 4.7, 0),
+	(5, "1984", "Author1", "Fiction", 10.99, "2011-09-13", 4.1, 8),
+	(6, "Pride and Prejudice", "Author1", "Literature", 8.99, "2019-10-16", 4.2, 10),
+	(7, "The Catcher in the Rye", "Author1", "Fiction", 9.99, "2021-04-10", 4.4, 2)
+;
+SELECT * FROM Books;
+
+-- Queries ***********************
+
+-- 1. Highest Rated Book by Genre
+
+-- 2. Books Within Price Range
+SELECT book_id, title, author, price FROM Books WHERE price BETWEEN 10 AND 30;
+
+-- 3. Recently Published Books
+SELECT title, author FROM Books ORDER BY published_date LIMIT 5;
+
+-- 4. Out of Stock Books
+SELECT book_id, title, author FROM Books WHERE stock = 0;
+
+-- 5. Average Rating Per Genre
+SELECT genre, AVG(rating) AS avg_rating FROM Books GROUP BY genre ORDER BY avg_rating;
+
+-- 6. Top 3 Most Expensive Books By Author
+
+
+-- 7. Books with Multiple Conditions
+SELECT book_id, title, rating, stock FROM Books WHERE (stock > 0) AND (rating >= 4.0) AND (published_date > "2020-01-01");

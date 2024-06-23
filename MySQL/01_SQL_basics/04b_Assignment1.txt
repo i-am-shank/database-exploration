@@ -1,0 +1,61 @@
+Q:1
+
+-- Task 1  :  Create the Database
+SHOW DATABASES;
+CREATE DATABASE Facebook;
+USE Facebook;
+
+-- Task 2  :  Create the Table
+CREATE TABLE Post(
+	PostId INT NOT NULL PRIMARY KEY,
+    post_title VARCHAR(255),
+    post_description VARCHAR(255),
+    created_by VARCHAR(255),
+    created_at DATE,
+    post_likes INT
+);
+DESCRIBE Post;
+DROP TABLE Post;
+
+-- Task 3  :  Insert Data into tables
+SHOW TABLES;
+CREATE TABLE Posts(
+	PostID INT NOT NULL PRIMARY KEY,
+    post_title VARCHAR(255),
+    post_description VARCHAR(255),
+    created_by VARCHAR(255),
+    created_at DATETIME,
+    post_likes INT,
+    isPublic BOOLEAN
+);
+DESCRIBE Posts;
+INSERT INTO Posts VALUES 
+	(1,  "The Joy of Painting",  "Discover the simplicity and beauty of painting with this introductory guide.",  "Alice",  "2023-01-01 00:00:00",  5,  TRUE),
+	(2,  "A Beginner's Guide to Programming",  "Dive into the world of programming with these easy to follow steps.",  "Bob",  "2023-01-02 00:00:00",  20,  TRUE),
+	(3,  "Top 10 Healthy Eating Habits",	 "Transform your diet and your life with these ten easy tips.",  "Charlie",  "2023-01-03 00:00:00",  15,  TRUE),
+	(4,  "Understanding The Stock Market",  "Demystifying the stock market for beginners and seasoned investors alike.",  "Diana",	 "2023-01-04 00:00:00",  7,  FALSE),
+	(5,  "The Future of Renewable Energy",  "A look into how renewable energy sources will shape our future.",  "Eve",  "2023-01-05 00:00:00",  33,  TRUE),
+	(6,  "The Secrets of Successful Entrepreneurs",  "Learn what sets successful entrepreneurs apart from the rest.",  "Frank",  "2023-01-06 00:00:00",  12,  FALSE),
+	(7,  "Exploring the World of Photography",  "A beginner's guide to capturing the world through the lens.",  "Grace",	 "2023-01-07 00:00:00",	 9,  TRUE),
+	(8,	 "Mastering the Art of Cooking",  "Elevate your cooking skills with these professional tips and tricks.",  "Hank",  "2023-01-08 00:00:00",  25,  TRUE),
+	(9,  "The Importance of Regular Exercise",  "Why regular exercise is crucial for your health and how to get started.",  "Irene",	 "2023-01-09 00:00:00",	 14,  TRUE),
+	(10,  "Tips for Effective Time Management",  "Maximize your productivity with these effective time management strategies.",  "John",  "2023-01-10 00:00:00",  18,  TRUE)
+;
+
+-- Task 4  :  Read data from the table
+SELECT * FROM Posts;
+SELECT created_by AS Author, post_description AS content FROM Posts;
+
+-- Task 5  :  Update a Post
+UPDATE Posts SET post_likes = 50 WHERE PostID = 8;
+UPDATE Posts SET isPublic = false,
+	post_description = "This is only for me..." 
+    WHERE created_by = "Charlie";
+    
+-- Task 6  :  Delete a Post
+DELETE FROM Posts WHERE PostID = 3;
+DELETE FROM Posts WHERE PostID = 6 AND created_by = "Frank";
+
+-- Task 7  :  Filtering
+SELECT * FROM Posts WHERE isPublic = true;
+SELECT * FROM Posts WHERE post_likes > 15;
