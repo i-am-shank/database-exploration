@@ -1,0 +1,89 @@
+Q: 1
+
+CREATE DATABASE market;
+SHOW DATABASES;
+
+USE market;
+SHOW TABLES;
+
+CREATE TABLE products (
+	product_index INT NOT NULL PRIMARY KEY,
+	product TEXT,
+	category TEXT,
+	sub_category TEXT,
+	brand TEXT,
+	sale_price INT,
+	market_price INT,
+	product_type TEXT,
+	rating DOUBLE,
+	product_description TEXT
+);
+
+DESCRIBE products;
+
+INSERT INTO products VALUES
+	(1,  "Garlic Oil - Vegetarian Capsule 500 mg",  "Beauty & Hygiene",  "Hair Care",  "Sri Sri Ayurveda",  220,  220,  "Hair Oil & Serum",  4.1,  "This Product contains Garlic Oil that is known to help proper digestion"),
+    (2,  "Water Bottle - Orange",  "Kitchen Garden & Pets",  "Storage & Accessories",  "Mastercook",  180,  180,  "Water & Fridge Bottles",  2.3,  "Each product is microwave safe (without lid)"),
+    (5,  "Creme Soft Soap - For Hands & Body",  "Beauty & Hygiene",  "Bath & Hand Wash",  "Nivea",  162,  162,  "Bathing Bars & Soaps",  4.4,  "Nivea Creme Soft Soap gives your skin the best care that it must get."),
+    (6,  "Germ - Removal Multipurpose Wipes",  "Cleaning & Household",  "All Purpose Cleaners",  "Nature Protect",  169,  199,  "Disinfectant Spray & Cleaners",  3.3,  "Stay protected from contamination with Multipurpose Germ"),
+    (7,  "Multani Mati",  "Beauty & Hygiene",  "Skin Care",  "Satinance",  58,  58,  "Face Care",  3.6,  "Satinance multani matti is an excellent skin toner and astringent."),
+    (8,  "Hand Sanitizer - 70% Alcohol Base",  "Beauty & Hygiene",  "Bath & Hand Wash",  "Bionova",  250,  250,  "Hand Wash & Sanitizers",  4.0,  "70%Alcohol based is gentle of hand leaves skin soft and moist with a good fragrance."),
+    (14,  "Mold & Mildew Remover with Bleach",  "Cleaning & Household",  "All Purpose Cleaners",  "Clorox",  350,  350,  "Floor & Other Cleaners",  3.8,  "This formula has been scientifically proven to kill 99.9% of germs.")
+;
+
+SELECT * FROM products;
+
+-- 1.
+SELECT (market_price - sale_price) FROM products;
+
+-- 2.
+SELECT ((market_price - sale_price) / market_price) * 100 FROM products;
+
+-- 3.
+SELECT (sale_price % 10) FROM products;
+
+-- 4.
+SELECT * FROM products WHERE rating >= 4.0;
+
+-- 5. 
+SELECT * FROM products WHERE market_price != sale_price;
+
+-- 6.
+SELECT * FROM products WHERE sale_price <= 500;
+
+-- 7.
+SELECT * FROM products WHERE sale_price BETWEEN 200 AND 400;
+
+-- 8.
+SELECT * FROM products WHERE rating > 4.5 AND sale_price < 300;
+
+-- 9.
+SELECT * FROM products WHERE product_type IN ("Lamp & Lamp Oil", "Roasted Seeds & Nuts");
+
+-- 10.
+SELECT * FROM products WHERE category != "Home";
+
+-- 11.
+SELECT * FROM products ORDER BY sale_price;
+
+-- 12.
+SELECT * FROM products ORDER BY category DESC;
+
+-- 13.
+SELECT * FROM products ORDER BY product_type, rating DESC;
+
+-- 14.
+SELECT * FROM products ORDER BY rating DESC LIMIT 5;
+
+-- 15.
+SELECT * FROM products ORDER BY rating DESC LIMIT 5 OFFSET 5;
+
+-- 16.
+SELECT * FROM products ORDER BY rating LIMIT 3;
+
+-- 17.
+SELECT DISTINCT category FROM products;
+
+DESCRIBE products;
+-- 18.
+SELECT DISTINCT brand FROM products WHERE category = "Beauty & Hygiene";

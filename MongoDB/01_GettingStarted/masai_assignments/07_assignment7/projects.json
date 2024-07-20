@@ -1,0 +1,38 @@
+[
+    {
+        "_id": 301,
+        "name": "Employee Management System",
+        "department": 101,
+        "budget": 90000
+    },
+    {
+        "_id": 302,
+        "name": "Payroll Software",
+        "department": 102,
+        "budget": 80000
+    },
+    {
+        "_id": 303,
+        "name": "Inventory Management",
+        "department": 103,
+        "budget": 95000
+    },
+    {
+        "_id": 304,
+        "name": "Customer Relations",
+        "department": 101,
+        "budget": 88000
+    },
+    {
+        "_id": 305,
+        "name": "Sales Dashboard",
+        "department": 102,
+        "budget": 92000
+    },
+    {
+        "_id": 306,
+        "name": "Product Development",
+        "department": 103,
+        "budget": 98000
+    }
+]

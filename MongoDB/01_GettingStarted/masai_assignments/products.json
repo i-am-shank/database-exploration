@@ -1,0 +1,366 @@
+[
+  {
+    "product_id": 101,
+    "name": "Wireless Keyboard",
+    "price": 49.99,
+    "details": {
+      "manufacturer": "Logitech",
+      "weight": 0.45
+    },
+    "in_stock": true,
+    "tags": ["electronics", "keyboard", "wireless", "accessories"],
+    "reviews": [
+      {
+        "user_id": 5001,
+        "rating": 5,
+        "comment": "Great keyboard, very comfortable and long battery life."
+      },
+      {
+        "user_id": 5002,
+        "rating": 4,
+        "comment": "Good value for the price, but the layout took some getting used to."
+      }
+    ]
+  },
+  {
+    "product_id": 102,
+    "name": "Bluetooth Mouse",
+    "price": 29.99,
+    "details": {
+      "manufacturer": "Microsoft",
+      "weight": 0.25
+    },
+    "in_stock": true,
+    "tags": ["electronics", "mouse", "bluetooth", "accessories"],
+    "reviews": [
+      {
+        "user_id": 5003,
+        "rating": 4,
+        "comment": "Very precise and easy to connect."
+      }
+    ]
+  },
+  {
+    "product_id": 103,
+    "name": "Smart Watch",
+    "price": 199.99,
+    "details": {
+      "manufacturer": "Apple",
+      "weight": 0.3
+    },
+    "in_stock": false,
+    "tags": ["electronics", "watch", "smart", "wearables"],
+    "reviews": [
+      {
+        "user_id": 5004,
+        "rating": 5,
+        "comment": "An essential tool for my daily activities."
+      },
+      {
+        "user_id": 5005,
+        "rating": 3,
+        "comment": "Battery life could be better."
+      }
+    ]
+  },
+  {
+    "product_id": 104,
+    "name": "Portable Charger",
+    "price": 19.95,
+    "details": {
+      "manufacturer": "Anker",
+      "weight": 0.2
+    },
+    "in_stock": true,
+    "tags": ["electronics", "charger", "portable", "battery"],
+    "reviews": []
+  },
+  {
+    "product_id": 105,
+    "name": "Ergonomic Chair",
+    "price": 350.0,
+    "details": {
+      "manufacturer": "Herman Miller",
+      "weight": 15.0
+    },
+    "in_stock": false,
+    "tags": ["furniture", "chair", "office", "ergonomic"],
+    "reviews": [
+      {
+        "user_id": 5006,
+        "rating": 5,
+        "comment": "Worth every penny for the comfort and posture support!"
+      }
+    ]
+  },
+  {
+    "product_id": 106,
+    "name": "Standing Desk",
+    "price": 499.99,
+    "details": {
+      "manufacturer": "Varidesk",
+      "weight": 20.0
+    },
+    "in_stock": true,
+    "tags": ["furniture", "desk", "office", "adjustable"],
+    "reviews": [
+      {
+        "user_id": 5007,
+        "rating": 4,
+        "comment": "Sturdy and spacious, but a bit hard to move up and down."
+      }
+    ]
+  },
+  {
+    "product_id": 107,
+    "name": "Gaming Monitor",
+    "price": 259.99,
+    "details": {
+      "manufacturer": "Samsung",
+      "weight": 4.5
+    },
+    "in_stock": true,
+    "tags": ["electronics", "monitor", "gaming", "high refresh rate"],
+    "reviews": [
+      {
+        "user_id": 5008,
+        "rating": 5,
+        "comment": "Amazing picture quality and really fast response time."
+      }
+    ]
+  },
+  {
+    "product_id": 108,
+    "name": "LED Lamp",
+    "price": 39.99,
+    "details": {
+      "manufacturer": "Philips",
+      "weight": 1.0
+    },
+    "in_stock": true,
+    "tags": ["home", "lamp", "LED", "lighting"],
+    "reviews": [
+      {
+        "user_id": 5009,
+        "rating": 4,
+        "comment": "Very bright and energy-efficient. Perfect for my desk."
+      }
+    ]
+  },
+  {
+    "product_id": 109,
+    "name": "Yoga Mat",
+    "price": 25.99,
+    "details": {
+      "manufacturer": "Manduka",
+      "weight": 0.8
+    },
+    "in_stock": true,
+    "tags": ["fitness", "yoga", "mat", "exercise"],
+    "reviews": [
+      {
+        "user_id": 5010,
+        "rating": 5,
+        "comment": "Excellent grip and just the right thickness."
+      }
+    ]
+  },
+  {
+    "product_id": 110,
+    "name": "Thermal Water Bottle",
+    "price": 34.99,
+    "details": {
+      "manufacturer": "Hydro Flask",
+      "weight": 0.35
+    },
+    "in_stock": true,
+    "tags": ["accessories", "bottle", "water", "thermal"],
+    "reviews": [
+      {
+        "user_id": 5011,
+        "rating": 4,
+        "comment": "Keeps water cold for hours, but a bit pricey."
+      }
+    ]
+  },
+  {
+    "product_id": 111,
+    "name": "Acoustic Guitar",
+    "price": 199.99,
+    "details": {
+      "manufacturer": "Fender",
+      "weight": 2.5
+    },
+    "in_stock": false,
+    "tags": ["music", "guitar", "acoustic", "instrument"],
+    "reviews": [
+      {
+        "user_id": 5012,
+        "rating": 5,
+        "comment": "Beautiful sound and well-crafted body."
+      }
+    ]
+  },
+  {
+    "product_id": 112,
+    "name": "Electric Toothbrush",
+    "price": 129.99,
+    "details": {
+      "manufacturer": "Oral-B",
+      "weight": 0.4
+    },
+    "in_stock": true,
+    "tags": ["hygiene", "toothbrush", "electric", "dental care"],
+    "reviews": [
+      {
+        "user_id": 5013,
+        "rating": 5,
+        "comment": "Great for dental health, easy to use and effective."
+      }
+    ]
+  },
+  {
+    "product_id": 113,
+    "name": "Noise Cancelling Headphones",
+    "price": 349.99,
+    "details": {
+      "manufacturer": "Bose",
+      "weight": 0.33
+    },
+    "in_stock": true,
+    "tags": ["electronics", "headphones", "noise cancelling", "audio"],
+    "reviews": [
+      {
+        "user_id": 5014,
+        "rating": 5,
+        "comment": "Top-notch noise cancellation and superb audio quality."
+      }
+    ]
+  },
+  {
+    "product_id": 114,
+    "name": "Drone",
+    "price": 999.99,
+    "details": {
+      "manufacturer": "DJI",
+      "weight": 1.5
+    },
+    "in_stock": false,
+    "tags": ["electronics", "drone", "camera", "aerial photography"],
+    "reviews": [
+      {
+        "user_id": 5015,
+        "rating": 5,
+        "comment": "Excellent for aerial shots, very stable and high-quality camera."
+      }
+    ]
+  },
+  {
+    "product_id": 115,
+    "name": "VR Headset",
+    "price": 299.99,
+    "details": {
+      "manufacturer": "Oculus",
+      "weight": 0.6
+    },
+    "in_stock": true,
+    "tags": ["electronics", "VR", "gaming", "virtual reality"],
+    "reviews": [
+      {
+        "user_id": 5016,
+        "rating": 4,
+        "comment": "Immersive experience, but requires a good PC to run smoothly."
+      }
+    ]
+  },
+  {
+    "product_id": 116,
+    "name": "Mechanical Keyboard",
+    "price": 89.99,
+    "details": {
+      "manufacturer": "Corsair",
+      "weight": 0.95
+    },
+    "in_stock": true,
+    "tags": ["electronics", "keyboard", "mechanical", "gaming"],
+    "reviews": [
+      {
+        "user_id": 5017,
+        "rating": 5,
+        "comment": "Fantastic build quality and key feel. Great for typing and gaming."
+      }
+    ]
+  },
+  {
+    "product_id": 117,
+    "name": "Multi-Cooker",
+    "price": 99.99,
+    "details": {
+      "manufacturer": "Instant Pot",
+      "weight": 5.0
+    },
+    "in_stock": true,
+    "tags": ["kitchen", "cooker", "multi-use", "appliance"],
+    "reviews": [
+      {
+        "user_id": 5018,
+        "rating": 5,
+        "comment": "Versatile and easy to use, perfect for quick meals."
+      }
+    ]
+  },
+  {
+    "product_id": 118,
+    "name": "Fitness Tracker",
+    "price": 149.99,
+    "details": {
+      "manufacturer": "Fitbit",
+      "weight": 0.1
+    },
+    "in_stock": true,
+    "tags": ["fitness", "tracker", "wearable", "health"],
+    "reviews": [
+      {
+        "user_id": 5019,
+        "rating": 4,
+        "comment": "Motivates me to stay active, but the app could be better."
+      }
+    ]
+  },
+  {
+    "product_id": 119,
+    "name": "Espresso Machine",
+    "price": 499.99,
+    "details": {
+      "manufacturer": "Breville",
+      "weight": 10.0
+    },
+    "in_stock": true,
+    "tags": ["kitchen", "espresso", "coffee", "machine"],
+    "reviews": [
+      {
+        "user_id": 5020,
+        "rating": 5,
+        "comment": "Makes professional quality espresso at home."
+      }
+    ]
+  },
+  {
+    "product_id": 120,
+    "name": "Waterproof Backpack",
+    "price": 79.99,
+    "details": {
+      "manufacturer": "North Face",
+      "weight": 0.8
+    },
+    "in_stock": true,
+    "tags": ["travel", "backpack", "waterproof", "gear"],
+    "reviews": [
+      {
+        "user_id": 5021,
+        "rating": 5,
+        "comment": "Durable and waterproof, perfect for all adventures."
+      }
+    ]
+  }
+]

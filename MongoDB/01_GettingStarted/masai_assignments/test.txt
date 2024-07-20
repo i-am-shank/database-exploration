@@ -1,0 +1,23 @@
+for(i=1; i<=n; i = (i*2)) {  // O(logn)
+  for(j=i; j<(2*i) && j<=n; j++) {  // min(i, n-i)   O(n)
+    // O(1) 
+  }
+}
+
+1 + 2 + .. + n
+= n(n+1) / 2  ~ O(n^2)
+
+i=1
+j=1 ; j<2  && j<n
+
+
+1 + 2 + 4 + 8  + .. + n
+
+no. of terms = (logn)
+
+1 * ((2^(logn-1) - 1))
+
+O(2 ^ logn)  =  O(n)
+
+a^log n (m) = (m ^ log n (a))
+

@@ -1,0 +1,86 @@
+students - collection
+
+{
+  {
+    _id: 1,
+    name: "Disha",
+    city: "Agra",
+    interests: ["swimming", "badminton"]
+  },
+  {
+    _id: 2,
+    name: "Shanks",
+    city: "Patna",
+    interests: ["badminton", "music"]
+  }
+}
+
+
+db.students.aggregate([
+  {
+    $unwind: "$interests"
+  }
+]);
+
+
+Output :-  (not updated in database .. only for queries)
+
+{
+  {
+    _id: 1,
+    name: "Disha",
+    city: "Agra",
+    interests: "swimming"
+  },
+  {
+    _id: 1,
+    name: "Disha",
+    city: "Agra",
+    interests: "badminton"
+  },
+  {
+    _id: 2,
+    name: "Shanks",
+    city: "Patna",
+    interests: "badminton"
+  },
+  {
+    _id: 2,
+    name: "Shanks",
+    city: "Patna",
+    interests: "music"
+  }
+}
+
+
+db.students.aggregate([
+  {
+    $unwind: "$interests"
+  },
+  {
+    $group: {
+      _id: "$interests",
+      student-names: {$push: "$name"}
+      count-students: {$sum: 1}
+    }
+  }
+]);
+
+
+{
+  {
+    _id: "swimming",
+    student-names: ["Disha"],
+    count-students: 1
+  },
+  {
+    _id: "music",
+    student-names: ["Shanks"],
+    count-students: 1
+  },
+  {
+    _id: "badminton",
+    student-names: ["Disha", "Shanks"],
+    count-students: 2
+  }
+}

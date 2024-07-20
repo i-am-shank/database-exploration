@@ -1,0 +1,47 @@
+1. How do you list all the databases present in your MongoDB server?
+ANS : By using following query in MongoDB shell :- 
+show databases;
+
+2. What command is used to create or switch toa  database in MongoDB?
+ANS : Let's say the database in which we want to switch or want to create is named "db_name". Then the command to do this :- 
+use db_name;
+
+3. How can you create a collection named "students" in your MongoDB database?
+ANS : Let's the collection is named "collection_name", then the command to do so is :-
+db.createCollection("collection_name");
+
+4. Write the command to insert a single document into the "students" collection with at least three fields: name, age, and course.
+ANS : db.students.insertOne({"name":"Shashank", "age":25, "course":"FSD"});
+
+5. How would you insert multiple documents into the "students" collection in a single command?
+ANS : db.students.insertMany([
+  {"name":"Shashank", "course":"FSD"},
+  {"name":"Kavita", "course":"SDET"}
+]);
+
+6. What command is used to find or read all documents in the "students" collection?
+ANS : db.students.find({});
+
+7. How can you read or find the first document in the "students" collection?
+ANS : db.students.find({}).limit(1);
+
+8. Describe the command to update the course field of a specific student named "John Doe" to "Data Science".
+ANS : db.students.updateOne(
+  {name:"John Doe"}, 
+  {$set: {course: "Data Science"}}
+);
+
+9. What command would you use to increment the age field of all documents in the "students" collection by 1?
+ANS : db.students.updateMany(
+  {}, 
+  {$inc: {age: 1}}
+);
+
+10. How can you delete a document with a specific name from the "students" collection?
+ANS : db.students.deleteOne({name:"Shubham"});
+
+11. Write the command to delete all documents from the "students" collection where the age is greater than or equal to a specific value.
+ANS : db.students.delete({age: {$gte : 29}});
+
+12. How do you find documents in the "students" collection where the course field is "Data Science"?
+ANS : db.students.find({course: "Data Science"});

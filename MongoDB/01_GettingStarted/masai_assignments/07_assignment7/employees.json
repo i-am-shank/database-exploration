@@ -1,0 +1,102 @@
+[
+    {
+        "_id": 1,
+        "name": "John Doe",
+        "department_id": 101,
+        "office_id": 201,
+        "age": 32,
+        "salary": 75000,
+        "hire_date": "2018-03-15",
+        "projects": [301, 302]
+    },
+    {
+        "_id": 2,
+        "name": "Jane Smith",
+        "department_id": 102,
+        "office_id": 202,
+        "age": 28,
+        "salary": 68000,
+        "hire_date": "2019-05-20",
+        "projects": [303, 304]
+    },
+    {
+        "_id": 3,
+        "name": "Bob Johnson",
+        "department_id": 101,
+        "office_id": 201,
+        "age": 35,
+        "salary": 80000,
+        "hire_date": "2017-08-10",
+        "projects": [302, 304]
+    },
+    {
+        "_id": 4,
+        "name": "Mary Brown",
+        "department_id": 103,
+        "office_id": 203,
+        "age": 42,
+        "salary": 90000,
+        "hire_date": "2016-01-25",
+        "projects": [301, 303]
+    },
+    {
+        "_id": 5,
+        "name": "David Lee",
+        "department_id": 102,
+        "office_id": 202,
+        "age": 29,
+        "salary": 70000,
+        "hire_date": "2020-11-08",
+        "projects": [303, 305]
+    },
+    {
+        "_id": 6,
+        "name": "Sarah Wilson",
+        "department_id": 103,
+        "office_id": 203,
+        "age": 38,
+        "salary": 85000,
+        "hire_date": "2015-07-03",
+        "projects": [305, 306]
+    },
+    {
+        "_id": 7,
+        "name": "Michael Taylor",
+        "department_id": 101,
+        "office_id": 201,
+        "age": 31,
+        "salary": 72000,
+        "hire_date": "2019-09-14",
+        "projects": [302, 304]
+    },
+    {
+        "_id": 8,
+        "name": "Emily Davis",
+        "department_id": 102,
+        "office_id": 202,
+        "age": 27,
+        "salary": 67000,
+        "hire_date": "2020-03-30",
+        "projects": [305, 306]
+    },
+    {
+        "_id": 9,
+        "name": "Daniel Anderson",
+        "department_id": 103,
+        "office_id": 203,
+        "age": 36,
+        "salary": 82000,
+        "hire_date": "2017-11-28",
+        "projects": [301, 303]
+    },
+    {
+        "_id": 10,
+        "name": "Olivia Hernandez",
+        "department_id": 101,
+        "office_id": 201,
+        "age": 33,
+        "salary": 76000,
+        "hire_date": "2018-07-12",
+        "projects": [301, 302]
+    }
+]

@@ -1,0 +1,89 @@
+db.collection1.aggregate([
+  {
+    $lookup : {
+      from : "collection2-name",
+      localField : "collection1-FK",       //   (collection1)  FK  <-->  PK  (collection2)
+      foreignField : "collection2-PK",
+      as : "new-key-name"
+    }
+  },
+  {
+    $match: {
+      {
+        new-key-name: {$ne : "xxxx"}
+      }
+    }
+  },
+  {
+    $sort: {
+      new-key-name: 1
+    }
+  },
+  {
+    $limit: 3
+  }
+]);
+
+
+Orders  -->  
+{
+  _id,
+  product_id, 
+  quantity
+}
+
+Products  -->  {name, price}
+
+
+New Orders collection  (after performing lookup .. with Products collection) :- 
+(updates aren't in database.. but only in output of query)
+
+
+{
+  _id,
+  product_id,
+  new-key-name : [
+    {name, price},
+    {name2, price2},
+  ],
+  quantity
+}
+
+
+
+
+aggregate([
+  {
+    $lookup : {....}
+  },
+  {
+    $unwind : "$new-key-name"
+  }
+]);
+
+{
+  new-key-name : 
+  {
+    _id,
+    {name, price},
+    quantity
+  }
+}
+
+{
+  new-key-name : 
+  {
+    _id2,
+    {name2, price2},
+    quantity2
+  }
+}
+
+
+new-key-name : 
+{
+  _id,
+  {name, price},
+  quantity
+}
+

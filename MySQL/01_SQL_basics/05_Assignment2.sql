@@ -30,9 +30,14 @@ INSERT INTO Books VALUES
 ;
 SELECT * FROM Books;
 
+SELECT genre, AVG(rating) FROM Books WHERE rating > 4 GROUP BY genre;
+
+SELECT genre, SUM(price) FROM Books GROUP BY genre HAVING SUM(price) <= 25;
+
 -- Queries ***********************
 
 -- 1. Highest Rated Book by Genre
+SELECT genre, MAX(rating) FROM Books GROUP BY genre;
 
 -- 2. Books Within Price Range
 SELECT book_id, title, author, price FROM Books WHERE price BETWEEN 10 AND 30;
@@ -46,8 +51,10 @@ SELECT book_id, title, author FROM Books WHERE stock = 0;
 -- 5. Average Rating Per Genre
 SELECT genre, AVG(rating) AS avg_rating FROM Books GROUP BY genre ORDER BY avg_rating;
 
--- 6. Top 3 Most Expensive Books By Author
+DESCRIBE Books;
 
+-- 6. Top 3 Most Expensive Books By Author
+SELECT author, MAX(price) FROM Books GROUP BY author;
 
 -- 7. Books with Multiple Conditions
 SELECT book_id, title, rating, stock FROM Books WHERE (stock > 0) AND (rating >= 4.0) AND (published_date > "2020-01-01");
